@@ -14,7 +14,6 @@ if API_URL == "YOUR_API_URL_HERE" or API_KEY == "YOUR_API_KEY_HERE" or API_MODEL
 set_config(API_URL, API_KEY, API_MODEL)
 
 desktop = Path.home() / "Desktop"
-filenamee = None
 
 for file in desktop.iterdir():
     if file.is_file() and file.suffix.lower() not in ('.lnk', '.url', '.ini', '.exe'):
@@ -37,9 +36,6 @@ for file in desktop.iterdir():
                         print(f"{filenamee} moved to {filefolder} folder")
                     else:
                         print(f"{filenamee} cannot be classified,didn't move to any folder.")
-
-
-
 
         except Exception as e:
             print(f"Error processing {filenamee}: {e}")
